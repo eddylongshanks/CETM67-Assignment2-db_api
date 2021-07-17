@@ -1,14 +1,9 @@
-# Example Readme file v1.0
+## oDip DB API v1.0
 
-## Sub heading 
+Accepts data from an SNS topic, to add to DynamoDB.
+Detects a new SNS Subscription Confirmation message and invokes the link to automatically confirm the request
 
-- List item 1
-- List item 2:
-  - Sub-list item 1
-  - Sub-list item 2
-  - Sub-list item 3
-- List item 3:
+Also provides endpoints for the following:
 
-### Notes
-
-Add hash symbols for smaller and smaller headings
+- Add Enquiry (/add-enquiry)
+- Get All Enquiries (/get-all-enquiries)
