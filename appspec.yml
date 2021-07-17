@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /home/ubuntu/db_api/
+hooks:
+  AfterInstall:
+   - location: script/setup
+     timeout: 300
+     runas: ubuntu
