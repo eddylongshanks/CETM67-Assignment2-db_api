@@ -1,8 +1,11 @@
 version: 0.0
 os: linux
+
 files:
-  - source: .
+  - source: /
     destination: /home/ubuntu/db_api/
+file_exists_behavior: overwrite
+
 hooks:
   AfterInstall:
    - location: script/setup
