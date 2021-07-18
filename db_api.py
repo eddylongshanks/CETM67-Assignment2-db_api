@@ -90,8 +90,14 @@ class GetLog(Resource):
 
 class HealthCheck(Resource):
     def get(self):
-        response_message = 'DB API Available. (CETM67 Assignment 2)'
-        return response_object(200, response_message)
+        try:
+            table = dynamodb.Table('Enquiry')
+
+            response_message = 'DB API Available. (CETM67 Assignment 2)'
+            return response_object(200, response_message)
+        except Exception as e:
+            response_message = f'{type(e).__name__}: DB API Unavailable. (CETM67 Assignment 2)'
+            return response_object(500, response_message)
 
 
 ## Routing ##
