@@ -96,6 +96,7 @@ class HealthCheck(Resource):
 
             response_message = 'DB API Available. (CETM67 Assignment 2)'
             return response_object(200, response_message)
+
         except Exception as e:
             response_message = f'{type(e).__name__}: DB API Unavailable. (CETM67 Assignment 2)'
             return response_object(500, response_message)
