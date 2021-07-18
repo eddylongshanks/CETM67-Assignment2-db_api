@@ -92,6 +92,7 @@ class HealthCheck(Resource):
     def get(self):
         try:
             table = dynamodb.Table('Enquiry')
+            enquiries = table.scan()
 
             response_message = 'DB API Available. (CETM67 Assignment 2)'
             return response_object(200, response_message)
