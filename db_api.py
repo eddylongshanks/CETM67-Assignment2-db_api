@@ -90,7 +90,7 @@ class GetLog(Resource):
 
 class HealthCheck(Resource):
     def get(self):
-        response_message = 'DB API Available'
+        response_message = 'DB API Available, Assignment 2'
         return response_object(200, response_message)
 
 
