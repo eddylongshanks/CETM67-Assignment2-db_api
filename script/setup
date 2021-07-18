@@ -1,2 +1,2 @@
 sudo systemctl restart db_api
-mkdir testscript
+mkdir /home/ubuntu/db_api/testscript
