@@ -26,7 +26,7 @@ class GetAllEnquiries(Resource):
         except Exception as e:
             log(e)
             response_message = str(type(e).__name__) + ": " + str(e)
-            return response_object(500, response_message)
+            abort(500, message=response_message)
 
 
 class AddEnquiry(Resource):
@@ -48,7 +48,7 @@ class AddEnquiry(Resource):
         except Exception as e:
             log(e)
             response_message = str(type(e).__name__) + ": " + str(e)
-            return response_object(500, response_message)
+            abort(500, message=response_message)
 
 
 class AddEnquirySNS(Resource):
@@ -79,7 +79,7 @@ class AddEnquirySNS(Resource):
         except Exception as e:
             log(e)
             response_message = json.dumps(str(e))
-            return response_object(500, response_message)
+            abort(500, message=response_message)
 
 
 class GetLog(Resource):
@@ -98,8 +98,9 @@ class HealthCheck(Resource):
             return response_object(200, response_message)
 
         except Exception as e:
+            log(e)
             response_message = f'{type(e).__name__}: DB API Unavailable. (CETM67 Assignment 2)'
-            return response_object(500, response_message)
+            abort(500, message=response_message)
 
 
 ## Routing ##
