@@ -100,7 +100,7 @@ class HealthCheck(Resource):
         except Exception as e:
             log(e)
             response_message = f'{type(e).__name__}: DB API Unavailable. (CETM67 Assignment 2)'
-            abort(500, description=response_message)
+            abort(500, message=response_message)
 
 
 ## Routing ##
