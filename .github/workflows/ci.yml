@@ -31,6 +31,9 @@ jobs:
         pip install bandit
         pip install -r requirements.txt
 
+    - name: Linting Check (PyLint)
+      run: pylint db_api.py
+
     - name: Safety Check
       run: safety check -r requirements.txt
 
