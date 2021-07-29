@@ -1,5 +1,4 @@
-""" db API
-"""
+""" db API v1.1 """
 # pylint: disable=missing-function-docstring, no-self-use, invalid-name, broad-except, inconsistent-return-statements, unused-variable
 
 import uuid
